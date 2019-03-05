@@ -41,7 +41,7 @@ model = Sequential()
 
 # Let's add some dropout on the input layer. 
 # We'll duplicate the input dimension to make it easier to comment out
-mode.add(Dropout(0.5, input_shape=(N_sequence,)))
+model.add(Dropout(0.5, input_shape=(N_sequence,)))
 model.add(Dense(16, activation='relu',input_dim=N_sequence))
 model.add(Dense(8, activation='softmax'))
 model.add(Dense(1, activation='sigmoid'))
