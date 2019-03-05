@@ -28,6 +28,12 @@ def read_training_data(ID, N):
 	# Now for y
 	fname = "./Train/Y_%d.dat" % ID
 	Y = np.fromfile(fname, 'double')
+	
+	#If you are going to add noise to this data set, here is a great place to do it.
+	# X = X + <NOISE>
+	# You can borrow parts from filter_demo.py for the exact syntax.
+	# PS: You could also create (def) a new function (def add_noise(X):) - your call.
+
 	return X,Y
 
 def read_test_data(ID, N):
@@ -48,6 +54,12 @@ def read_test_data(ID, N):
         # Now for y
         fname = "./Test/Y_%d.dat" % ID
         Y = np.fromfile(fname, 'double')
+	
+	#If you are going to add noise to this data set, here is a great place to do it.
+	# X = X + <NOISE>
+	# You can borrow parts from filter_demo.py for the exact syntax.
+	# PS: You could also create (def) a new function (def add_noise(X):) - your call.
+	
 	return X,Y
 
 
