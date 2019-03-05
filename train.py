@@ -39,11 +39,9 @@ for x in range(N_test):
 # Create our Keras model - an RNN (in Keras this is a Sequence)
 model = Sequential()
 
-# Configure our RNN by adding neural layers with activation functions
-# You might notice I have removed tanh as an activation function from
-# the hidden layer - there is a reason for this; the vanishing gradients
-# of the tanh function at larger input values make it a poor choice
-# for hidden layers.
+# Let's add some dropout on the input layer. 
+# We'll duplicate the input dimension to make it easier to comment out
+mode.add(Dropout(0.5, input_shape=(N_sequence,)))
 model.add(Dense(16, activation='relu',input_dim=N_sequence))
 model.add(Dense(8, activation='softmax'))
 model.add(Dense(1, activation='sigmoid'))
